@@ -309,9 +309,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"CONTRACTS/Task_2.sol": "DataTypesPractice"
+			"CONTRACTS/Combined_Task_2.sol": "DataTypesPractice"
 		},
-		"evmVersion": "paris",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -323,20 +323,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"CONTRACTS/Task_2.sol": {
-			"keccak256": "0x6781c6254e3afc8452c95669d4a596c1454eb3a2b384dc5186d60097e7bdc67b",
+		"CONTRACTS/Combined_Task_2.sol": {
+			"keccak256": "0x50a40c96123d5a649d45251499956fd9d3e9205dcdd088d5057d77a41ff979ee",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://47364dae4fbfa18e1b1ee25d62c8168c5802616b20c078ecf471b0a34e9a042e",
-				"dweb:/ipfs/QmeqquLfmn66wbG26z9W88V37rkSpBYdQTTDRRtNyG3Sh8"
-			]
-		},
-		"TEMP/asset-v1_Task2_1_.sol": {
-			"keccak256": "0x495f3bd781f961493a8540d1e61a9185582a07d2aea8a1a72e4687b64d303952",
-			"license": "UNLICENSED",
-			"urls": [
-				"bzz-raw://2ce1c10abbd979a0c61aa4ab91429d19fc74e21d9d76499ceb6a5c0bb501342e",
-				"dweb:/ipfs/QmZG7BTAvWdBiwbrGcHHsvdRf5tP7ofLtjzpKgEjrMM1dm"
+				"bzz-raw://1b4e445bf18ed5016c78a52a27bbe5a98cc1bd804e043f8d08aacd18347ca36f",
+				"dweb:/ipfs/QmUBHrSzdhD4zer1YdtEqAZyqUFvRSKp25dnABDmBzxyJ2"
 			]
 		}
 	},

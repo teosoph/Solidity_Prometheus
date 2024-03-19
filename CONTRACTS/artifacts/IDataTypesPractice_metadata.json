@@ -162,9 +162,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"CONTRACTS/Task_2.sol": "IDataTypesPractice"
+			"CONTRACTS/Combined_Task_2.sol": "IDataTypesPractice"
 		},
-		"evmVersion": "paris",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -176,12 +176,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"CONTRACTS/Task_2.sol": {
-			"keccak256": "0x054cc14235105e30733d1e1b8191f2cb63c64d081a864ccfd73cf2b10d5647b3",
+		"CONTRACTS/Combined_Task_2.sol": {
+			"keccak256": "0x50a40c96123d5a649d45251499956fd9d3e9205dcdd088d5057d77a41ff979ee",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://05b0480302cfa0cb4a8e829f0fa6a88375adb840dccac7976074e2d379865787",
-				"dweb:/ipfs/QmQp3krMNEGpYU6yL8dNFueeQRu4KztLsfWQ3NNtVVgktm"
+				"bzz-raw://1b4e445bf18ed5016c78a52a27bbe5a98cc1bd804e043f8d08aacd18347ca36f",
+				"dweb:/ipfs/QmUBHrSzdhD4zer1YdtEqAZyqUFvRSKp25dnABDmBzxyJ2"
 			]
 		}
 	},

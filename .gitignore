@@ -131,3 +131,12 @@ dist
 ENVIRONMENTS/api_key.json
 ENVIRONMENTS/mnemonics.json
 ENVIRONMENTS/etherscan_api.json
+.states/
+artifacts/
+/artifacts/
+cache/
+swarm/
+
+CONTRACTS/artifacts/IDataTypesPractice_metadata.json
+CONTRACTS/artifacts/DataTypesPractice.json
+CONTRACTS/artifacts/DataTypesPractice_metadata.json
