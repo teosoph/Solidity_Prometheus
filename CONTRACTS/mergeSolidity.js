@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const mainFile = "Task_2.sol"; // The main contract file
-const outputFilePath = path.join(__dirname, "Combined_Task_2.sol"); // Path for the combined output file
+const mainFile = "DataTypesPractice.sol";
+const outputFilePath = path.join(__dirname, "../contracts_comb/Combined_DataTypesPractice.sol");
 
 // Function to read and merge files
 async function mergeFiles(filePath, baseDir = __dirname, alreadyImported = new Set()) {
@@ -13,8 +13,8 @@ async function mergeFiles(filePath, baseDir = __dirname, alreadyImported = new S
         content.split("\n").map(async (line) => {
             const match = line.match(/^\s*import\s+['"](.+)['"];/);
             if (match && !alreadyImported.has(match[1])) {
-                alreadyImported.add(match[1]); // Mark file as already processed
-                // Read and merge the imported file
+                alreadyImported.add(match[1]);
+
                 const importedContent = await mergeFiles(
                     match[1],
                     path.dirname(path.join(baseDir, filePath)),
@@ -31,8 +31,10 @@ async function mergeFiles(filePath, baseDir = __dirname, alreadyImported = new S
 
 // Start the merging process
 mergeFiles(mainFile)
-    .then((content) => {
-        // Write the result to the output file
+    .then(async (content) => {
+        // Ensure the directory exists before writing the file
+        await fs.promises.mkdir(path.dirname(outputFilePath), { recursive: true });
+
         fs.promises
             .writeFile(outputFilePath, content)
             .then(() => console.log(`The combined file has been saved as: ${outputFilePath}`))

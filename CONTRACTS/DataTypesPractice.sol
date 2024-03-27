@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.20;
 
-import "../TEMP/asset-v1_Task2_1_.sol";
+import "../TEMP/asset.sol";
 
 contract DataTypesPractice is IDataTypesPractice {
     int256 public int256Value = -1;
@@ -17,7 +17,7 @@ contract DataTypesPractice is IDataTypesPractice {
 
     constructor() {
         for (uint i = 0; i < 5; i++) {
-        arrayUintValue.push(i + 1);
+            arrayUintValue.push(i + 1);
         }
     }
 

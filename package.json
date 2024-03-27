@@ -2,17 +2,26 @@
   "name": "solidity-prometheus",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "hardhat compile",
     "deploy": "hardhat run scripts/deploy.js",
-    "node": "hardhat node",
+    "hardhat:node": "hardhat node",
+    "hardhat:compile": "hardhat compile",
+    "hardhat:compile:force": "hardhat compile --force",
+    "hardhat:test": "hardhat test",
+    "hardhat:test:gas": "REPORT_GAS=true COINMARKETCAP_API_KEY=$(security find-generic-password -w -s 'Coinmarketcap API Key') hardhat test",
+    "hardhat:deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
+    "hardhat:deploy:counter": "hardhat run scripts/deploy.js --network localhost",
+    "hardhat:deploy:sepolia-1": "hardhat run scripts/deploy.js --network sepolia",
+    "hardhat:deploy:sepolia-2": "MNEMONIC=$(security find-generic-password -w -s 'Seed Phrase (for Testnets)') INFURA_API_KEY=$(security find-generic-password -w -s 'Infura API key (Solidity Courses)') hardhat run scripts/deployLock.js --network sepolia",
+    "hardhat:verify:sepolia-1": "hardhat verify --network sepolia <Contract_Address> <Constructor_Arguments>",
+    "hardhat:verify:sepolia-2": "ETHERSCAN_API_KEY=$(security find-generic-password -w -s 'Etherscan API Key') INFURA_API_KEY=$(security find-generic-password -w -s 'Infura API key (Solidity Courses)') hardhat verify --network sepolia 0x4ca86c08a287f1e268e50b927176badb178de1ed 0x0000000000000000000000000000000000000000000000000000000064d2530c",
     "remixd": "npx remixd -s $(pwd) --remix-ide https://remix.ethereum.org"
   },
   "keywords": [],
   "author": "Ihor Kyrychenko",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 4,
@@ -29,10 +38,11 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.9.3",
-    "@remix-project/remixd": "^0.6.17",
+    "@remix-project/remixd": "^0.6.29",
     "bip39": "^3.1.0",
     "ganache": "^7.9.1",
     "ganache-cli": "^6.12.2",
+    "remixd": "^0.2.4",
     "truffle": "^5.11.5",
     "truffle-flattener": "^1.6.0"
   }

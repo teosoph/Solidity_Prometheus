@@ -140,3 +140,4 @@ swarm/
 CONTRACTS/artifacts/IDataTypesPractice_metadata.json
 CONTRACTS/artifacts/DataTypesPractice.json
 CONTRACTS/artifacts/DataTypesPractice_metadata.json
+package-lock.json

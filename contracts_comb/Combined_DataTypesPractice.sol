@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.20;
 
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.20;
+
 interface IDataTypesPractice {
     function getInt256() external view returns (int256);
 
@@ -25,6 +28,8 @@ interface IDataTypesPractice {
     function getBigUint() external pure returns (uint256);
 }
 
+
+
 contract DataTypesPractice is IDataTypesPractice {
     int256 public int256Value = -1;
     uint256 public uint256Value = 1;
@@ -32,7 +37,7 @@ contract DataTypesPractice is IDataTypesPractice {
     uint8 public uint8Value = 1;
     bool public boolValue = true;
     address public addressValue = 0xdCad3a6d3569DF655070DEd06cb7A1b2Ccd1D3AF;
-    bytes32 public bytes32Value = 0x48656c6c6f20576f726c64210000000000000000000000000000000000000000; 
+    bytes32 public bytes32Value = 0x48656c6c6f20576f726c64210000000000000000000000000000000000000000; // "Hello World!" в hex
     uint256[5] public arrayUint5Value = [1, 2, 3, 4, 5];
     uint256[] public arrayUintValue;
     string public stringValue = "Hello World!";
@@ -86,6 +91,7 @@ contract DataTypesPractice is IDataTypesPractice {
     function getBigUint() external pure override returns (uint256) {
         uint256 v1 = 2;
         uint256 v2 = 3;
-        return (v1 ** v2) ** v2 ** v2; 
+        // Використовуємо піднесення до степеня і множення, щоб отримати велике число
+        return (v1 ** v2) ** v2 ** v2; // Операція піднесення до степеня, що забезпечить велике значення
     }
 }
